@@ -6,11 +6,11 @@ using libraries dedicated to time series analysis. Some recent techniques can al
 data. Usually, multiple sensors are required to achieve high classification accuracy, which is not very practical. 
 Recent work utilizing the latest advances in computer vision applied to video has shown similar performance without
 the need for manual feature engineering, while avoiding some pitfalls, such as sensor calibration and placement on 
-the body, which may hinder the movement. In this paper, we compare the performance of wearable sensors using IMUs and video-based approaches for human 
-exercise classification, on two real-world datasets consisting of Military Press and Rowing exercises. We compare 
-the performance using a single camera that captures video in the frontal view versus using the data captured by 
-5 IMUs placed on different parts of the body. We observe that a method based on a single camera can outperform 
-a single IMU by 10 percentage points on average. Additionally, a minimum of 3 IMUs are required to outperform 
+the body, which may hinder the movement. In this paper, we compare the performance of wearable sensors using IMUs and 
+video-based approaches for human exercise classification, on two real-world datasets consisting of Military Press and 
+Rowing exercises. We compare the performance using a single camera that captures video in the frontal view versus using
+the data captured by 5 IMUs placed on different parts of the body. We observe that a method based on a single camera can 
+outperform a single IMU by 10 percentage points on average. Additionally, a minimum of 3 IMUs are required to outperform 
 the single camera. We observe that working with the raw data using multivariate time series classifiers 
 outperforms traditional approaches based on handcrafted or automatically extracted features. Finally, we show 
 that an ensemble model combining the data from a single camera with a single IMU significantly outperforms either 
@@ -37,7 +37,8 @@ contains tabular features created using libraries such as catch22 and tsfresh
 For tabular features, also train/test has already been created in the ratio of 70/30 for train/test. Some folders 
 contain the pid file which basically maps each sample in the train/test to a unique participant id with a particular
 exercise type and repetition number. This information can be used to create further splits. If some folders does
-not contain this file it can be copied from other folder as the order of the features remain same.
+not contain this file it can be copied from other folder as the order of the features remain same. The data can be 
+downloaded from the Google Drive [link](https://drive.google.com/drive/folders/16grxbvok22cKgDIh2MkgOAznNNdpqPWO?usp=sharing). 
 
 Please [email](mailto:ashish.singh@ucdconnect.ie) if you need access to the original videos.
 
@@ -52,5 +53,14 @@ Please cite this paper if it helped in your research:
   year={2021},
   booktitle = {5th International Workshop on Health Intelligence(W3PHIAI-21) at AAAI21},
   publisher={Springer}
+}
+
+
+@misc{ashishdami2022,
+  doi = {10.48550/ARXIV.2210.00507},
+  url = {https://arxiv.org/abs/2210.00507},
+  author = {Singh, Ashish and Bevilacqua, Antonio and Nguyen, Thach Le and Hu, Feiyan and McGuinness, Kevin and OReilly, Martin and Whelan, Darragh and Caulfield, Brian and Ifrim, Georgiana},
+  year={2022},
+  title = {Fast and Robust Video-Based Exercise Classification via Body Pose Tracking and Scalable Multivariate Time Series Classifiers},
 }
 ```
