@@ -18,6 +18,11 @@ data modality. Our research opens up new and more realistic avenues for this app
 readily available smartphones combined with a single sensor can be used to more effectively classify human 
 exercise execution.
 
+![Alt text](figs/overview.png?raw=true)
+
+<em>**Fig 1** Comparison of video (top) and sensors (bottom) to classify human exercise movement. The upper box presents
+the process of obtaining multivariate data (only 3 out of 25 body parts shown) from video. The bottom box shows the raw 
+Y signals from IMUs placed on the participant's body (only 3 signals shown here).</em>
 
 ## Data Description
 The data used is the video recordings and IMU data of the execution of the Military Press (MP) and Rowing exercise.
@@ -42,7 +47,24 @@ downloaded from the Google Drive [link](https://drive.google.com/drive/folders/1
 
 Please [email](mailto:ashish.singh@ucdconnect.ie) if you need access to the original videos.
 
+## Comparison of IMUs, Video and Ensemble based approach
+Data Source | Acc MP | Acc Rowing |
+--------------- |--------|------------|
+Placement of IMUs |        | |
+3 IMUs (Wrists and Back)  | 0.91   | 0.80       |
+1 IMU (RightWrist)    | 0.83   |  0.68      |
+Video |        | | 
+25 body parts         | 0.82   | 0.79|
+8 body parts  | 0.88   | 0.83 |
+Ensemble: video and IMUs  |        | |
+Video (8 body parts) + 3 IMUs              | 0.93   | 0.88   |
+Video (8 body parts) + 1 IMU RightWrist | 0.93   | 0.85 |
 
+<em>Table 3: Comparison of accuracy obtained using IMUs and video for MP and Rowing. </em>
+
+Table 3 presents the results for IMU and Video for both MP and Rowing exercises. We observe that a minimum of 3 IMUs 
+are required to achieve a higher accuracy than a single video. A single video outperforms the accuracy of using a single
+IMU for both exercises.
 
 ## Citation
 Please cite this paper if it helped in your research:
